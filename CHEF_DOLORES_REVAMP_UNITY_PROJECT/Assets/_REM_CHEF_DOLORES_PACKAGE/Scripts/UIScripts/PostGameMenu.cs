@@ -46,8 +46,9 @@ public class PostGameMenu : MonoBehaviour {
 			"Plaza: " + DatosJugador.instance.plazaSeleccionada + "\n" +
 			"Cadena: " + DatosJugador.instance.cadenaSeleccionada + "\n" +
 			"Premio: " + DatosJugador.instance.premioSeleccionado + "\n" +
-			"Resultado: " + DatosJugador.instance.resultadoDelJuego + "\n" +
-			"--------------------"
+			"Puntos obtenidos: " + DatosJugador.instance.puntosObtenidos + "\n" +
+			"--------------------" + "\n" +
+			"Resultado: " + DatosJugador.instance.resultadoDelJuego
 			;
 
 		textArea.text = infoString.ToUpper();
