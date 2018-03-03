@@ -21,11 +21,11 @@ public class ManagerWeb : MonoBehaviour {
 		yield return www.SendWebRequest();
 
 		if(www.isNetworkError || www.isHttpError) {
-			Debug.Log(www.error);
+			//Debug.Log(www.error);
 		}
 		else {
 			// Show results as text
-			Debug.Log(www.downloadHandler.text);
+			//Debug.Log(www.downloadHandler.text);
 		}
 	}
 
@@ -36,13 +36,13 @@ public class ManagerWeb : MonoBehaviour {
 		yield return www.downloadHandler.text;
 
 		if(www.isNetworkError || www.isHttpError) {
-			Debug.Log(www.error);
+			//Debug.Log(www.error);
 		}
 		else {
 			// Show results as text
-			//Debug.Log(www.downloadHandler.text);
+			////Debug.Log(www.downloadHandler.text);
 			//return www.downloadHandler.text;
-			Debug.Log("Connection success");
+			//Debug.Log("Connection success");
 		}
 	}
 }

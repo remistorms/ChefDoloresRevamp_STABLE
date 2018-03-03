@@ -77,7 +77,7 @@ public class PlayerHand : MonoBehaviour {
 		yield return new WaitForSeconds (0.5f);
 
 		//Actvate machine receive Ingredient here
-		Debug.Log("Here im activating my machine " );
+		////Debug.Log("Here im activating my machine " );
 		MixerMachine.instance.ReceiveIngredient(held_item);
 
 		held_item = null;

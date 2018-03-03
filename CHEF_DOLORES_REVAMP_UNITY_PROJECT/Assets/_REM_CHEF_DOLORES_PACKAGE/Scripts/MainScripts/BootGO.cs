@@ -22,7 +22,7 @@ public class BootGO : MonoBehaviour {
 			instance = this;
 		} else {
 			Destroy (this.gameObject);
-			Debug.Log ("Previously created boot already exists, destroying original one...SAD");
+			//Debug.Log ("Previously created boot already exists, destroying original one...SAD");
 		}
 		DontDestroyOnLoad (this.gameObject);
 		DisableVR ();

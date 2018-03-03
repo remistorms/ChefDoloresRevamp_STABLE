@@ -52,22 +52,22 @@ public class RemCaster : MonoBehaviour {
 		/// 
 		//PLAYER IS LOOKING AT MACHINE WITH EMPTY HANDS
 		if (Physics.Raycast (myRay, out machineHit, 20, machineLayer) && PlayerHand.instance.held_item == null) {
-			//Debug.Log("Player is looking at machine while NOT holding an item");
+			////Debug.Log("Player is looking at machine while NOT holding an item");
 			obj_in_sight = machineHit.collider.gameObject;
 
 			//Player clicks on mouse button
 			if (Input.GetMouseButtonDown(0)) {
-				Debug.Log("Player is clicking at machine while NOT holding an item");	
+				//Debug.Log("Player is clicking at machine while NOT holding an item");	
 			}
 		} 
 
 		//PLAYER IS LOOKING AT MACHINE WHILE HOLDING AN ITEM
 		if (Physics.Raycast (myRay, out machineHit, 20, machineLayer) && PlayerHand.instance.held_item != null) {
-			Debug.Log("Player is looking at machine while holding an item");
+			//Debug.Log("Player is looking at machine while holding an item");
 			obj_in_sight = machineHit.collider.gameObject;
 			//Player clicks on mouse button
 			if (Input.GetMouseButtonDown(0)) {
-				Debug.Log("Player is clicking at machine while holding " + PlayerHand.instance.held_item.name);	
+				//Debug.Log("Player is clicking at machine while holding " + PlayerHand.instance.held_item.name);	
 			}
 		} 
 
@@ -77,7 +77,7 @@ public class RemCaster : MonoBehaviour {
 	void ClickOnItem(){
 		//Player clicks-on mouse when not holding an item in hand
 		if (Input.GetMouseButtonDown(0) && PlayerHand.instance.held_item == null && obj_in_sight != null) {
-			Debug.Log ("Grabbing " + obj_in_sight.name);
+			//Debug.Log ("Grabbing " + obj_in_sight.name);
 			PlayerHand.instance.HoldItem (obj_in_sight);
 		}
 

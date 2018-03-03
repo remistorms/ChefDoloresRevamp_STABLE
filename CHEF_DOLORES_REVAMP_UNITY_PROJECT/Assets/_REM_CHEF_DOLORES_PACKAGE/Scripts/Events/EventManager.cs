@@ -30,7 +30,7 @@ public class EventManager : MonoBehaviour {
 	{
 		if (EVT_Button_Pressed != null) 
 		{
-			Debug.Log ("Event: 'EVT_Button_Pressed' has been fired");
+			//Debug.Log ("Event: 'EVT_Button_Pressed' has been fired");
 			EVT_Button_Pressed ();
 		}
 	}
@@ -47,7 +47,7 @@ public class EventManager : MonoBehaviour {
 	{
 		if (EVT_Enemy_Destroyed != null) 
 		{
-			Debug.Log("EVT_Enemy_Destroyed has been triggered");
+			//Debug.Log("EVT_Enemy_Destroyed has been triggered");
 			EVT_Enemy_Destroyed ();	
 		}
 	}
@@ -55,7 +55,7 @@ public class EventManager : MonoBehaviour {
 	public void Fire_EVT_HoverOverButton(){
 		if (EVT_HoverOverButton != null) 
 		{
-			Debug.Log("Fire_EVT_HoverOverButton");
+			//Debug.Log("Fire_EVT_HoverOverButton");
 			EVT_HoverOverButton ();
 		}
 	}

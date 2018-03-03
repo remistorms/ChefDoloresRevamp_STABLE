@@ -15,7 +15,7 @@ public class FinishedDish : MonoBehaviour {
 	public Text dishPointsLabel;
 	Vector3 originalScale;
 
-	public int[] multipicadores;
+	//public int[] multipicadores;
 
 	void Awake(){
 		instance = this;

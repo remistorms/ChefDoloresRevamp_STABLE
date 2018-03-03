@@ -46,7 +46,7 @@ public class PostGameMenu : MonoBehaviour {
 			"Plaza: " + DatosJugador.instance.plazaSeleccionada + "\n" +
 			"Cadena: " + DatosJugador.instance.cadenaSeleccionada + "\n" +
 			"Premio: " + DatosJugador.instance.premioSeleccionado + "\n" +
-			"Puntos obtenidos: " + DatosJugador.instance.puntosObtenidos + "\n" +
+			"Puntos obtenidos: " + PostGameUI.instance.playerScore + "\n" +
 			"--------------------" + "\n" +
 			"Resultado: " + DatosJugador.instance.resultadoDelJuego
 			;

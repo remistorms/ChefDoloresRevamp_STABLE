@@ -39,12 +39,12 @@ public class IngredientsSetup : MonoBehaviour {
 		//yield return new WaitForSeconds (1.5f);
 
 		if(www.isNetworkError || www.isHttpError) {
-			Debug.Log(www.error);
+			//Debug.Log(www.error);
 			SecondaryCanvas.instance.ShowErrorMessage ("OCURRIO UN ERROR: IG747");
 		}
 		else {
-			Debug.Log ("SI CONECTO");
-			Debug.Log (www.downloadHandler.text);
+			//Debug.Log ("SI CONECTO");
+			//Debug.Log (www.downloadHandler.text);
 			// Show results as text
 			superString = www.downloadHandler.text;
 

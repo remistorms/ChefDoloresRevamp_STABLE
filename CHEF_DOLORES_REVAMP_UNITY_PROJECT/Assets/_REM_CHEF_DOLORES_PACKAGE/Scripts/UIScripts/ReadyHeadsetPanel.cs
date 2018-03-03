@@ -9,6 +9,7 @@ using UnityEngine.XR;
 public class ReadyHeadsetPanel : MonoBehaviour {
 
 	public Image[] fillClocks;
+	public GameObject buttonOK;
 
 	public void StartTimer(){
 
@@ -16,6 +17,8 @@ public class ReadyHeadsetPanel : MonoBehaviour {
 	}
 
 	IEnumerator StartTimerRoutine(){
+		//Disables button
+		buttonOK.SetActive(false);
 		//Tweens fill image and then calls the method to load the scene
 		foreach (var item in fillClocks) {
 			DOTween.To (

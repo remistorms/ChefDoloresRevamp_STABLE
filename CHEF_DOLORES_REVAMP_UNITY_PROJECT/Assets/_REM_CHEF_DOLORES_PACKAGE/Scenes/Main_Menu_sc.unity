@@ -5419,7 +5419,7 @@ MonoBehaviour:
   superString: 
   ingredientes_puntos: []
   ingredientes: []
-  puntos: []
+  puntos: 
   separators:
   - '|'
   - ','
@@ -8848,6 +8848,7 @@ MonoBehaviour:
   fillClocks:
   - {fileID: 442587785}
   - {fileID: 308995642}
+  buttonOK: {fileID: 929007978}
 --- !u!1 &1881673899
 GameObject:
   m_ObjectHideFlags: 0

@@ -55,7 +55,7 @@ public class MixerMachine : MonoBehaviour {
 
 	//	Method to receive indredient
 	public void ReceiveIngredient(GameObject ingredient){
-			Debug.Log ("MixerMachine received an ingredient just now");
+			//Debug.Log ("MixerMachine received an ingredient just now");
 
 			//Animates ingredient entering machine
 		DOTween.To(
@@ -86,6 +86,7 @@ public class MixerMachine : MonoBehaviour {
 			if (currentSlot == 5) {
 				isMaxedOut = true;
 				//MixIngredients ();
+				machineCollider.enabled = false;
 			}
 	}
 
@@ -95,7 +96,7 @@ public class MixerMachine : MonoBehaviour {
 		if (canMix) {
 			StartCoroutine (MixIngredientsRoutine ());
 		} else {
-			Debug.Log ("Mixer is Not ready");
+			//Debug.Log ("Mixer is Not ready");
 		}
 
 	}
@@ -127,7 +128,7 @@ public class MixerMachine : MonoBehaviour {
 
 		//HERE GOES THE CODE TO MAKE THE DISJ AND PUT IT ON BONE
 		GetPoints();
-		Debug.LogError (ingredientsInsideMachine[1].name);
+		////Debug.LogError (ingredientsInsideMachine[1].name);
 		finishedDishReference.CreateDish(ingredientsInsideMachine[1].name);
 		yield return new WaitForSeconds (mixTime);
 
@@ -135,13 +136,13 @@ public class MixerMachine : MonoBehaviour {
 		yield return new WaitForSeconds (0.5f);
 		finishedDishReference.EnableDishCollider ();
 
-		Debug.Log ("DONE");
+		////Debug.Log ("DONE");
 
 		//CLEAR INGREDIENTS
 		EmptyMachine();
 
-		canMix = true;
-		machineCollider.enabled = canMix;
+		//canMix = true;
+		//machineCollider.enabled = canMix;
 
 	}
 
@@ -195,12 +196,12 @@ public class MixerMachine : MonoBehaviour {
 
 		foreach (var item in ingredientsInsideMachine) {
 			mixTime += Mathf.CeilToInt( item.GetComponent<Ingredient> ().timeToProcess);
-			//Debug.Log ("Machine will take " + mixTime + " seconds making the dish");
+			////Debug.Log ("Machine will take " + mixTime + " seconds making the dish");
 		}
 
 		TimeSlider ();
 
-		//Debug.Log ("ingredients inside machine:" + ingredientsInsideMachine.Count);
+		////Debug.Log ("ingredients inside machine:" + ingredientsInsideMachine.Count);
 
 		switch (ingredientsInsideMachine.Count) {
 
@@ -208,14 +209,14 @@ public class MixerMachine : MonoBehaviour {
 			case 2:
 			totalPoints = (ingredientsInsideMachine [0].GetComponent<Ingredient> ().points * multipicadores[0]) +
 				(ingredientsInsideMachine [1].GetComponent<Ingredient> ().points * multipicadores[1]);
-			Debug.Log ("Fired case 2");
+			//Debug.Log ("Fired case 2");
 			break;
 
 			case 3:
 			totalPoints = (ingredientsInsideMachine [0].GetComponent<Ingredient> ().points * multipicadores[0]) +
 				(ingredientsInsideMachine [1].GetComponent<Ingredient> ().points * multipicadores[1]) +
 				(ingredientsInsideMachine [2].GetComponent<Ingredient> ().points * multipicadores[2]);
-			Debug.Log ("Fired case 3");
+			//Debug.Log ("Fired case 3");
 			break;
 
 			case 4:
@@ -223,7 +224,7 @@ public class MixerMachine : MonoBehaviour {
 				(ingredientsInsideMachine [1].GetComponent<Ingredient> ().points * multipicadores[1]) +
 				(ingredientsInsideMachine [2].GetComponent<Ingredient> ().points * multipicadores[2]) +
 				(ingredientsInsideMachine [3].GetComponent<Ingredient> ().points * multipicadores[3]);
-			Debug.Log ("Fired case 4");
+			//Debug.Log ("Fired case 4");
 			break;
 
 			case 5:
@@ -232,7 +233,7 @@ public class MixerMachine : MonoBehaviour {
 				(ingredientsInsideMachine [2].GetComponent<Ingredient> ().points * multipicadores[2]) +
 				(ingredientsInsideMachine [3].GetComponent<Ingredient> ().points * multipicadores[3]) +
 				(ingredientsInsideMachine [4].GetComponent<Ingredient> ().points * multipicadores[4]);
-			Debug.Log ("Fired case 5");
+			//Debug.Log ("Fired case 5");
 			break;
 
 			default:
@@ -241,14 +242,14 @@ public class MixerMachine : MonoBehaviour {
 
 
 		totalPoints = Mathf.RoundToInt (totalPoints);
-		Debug.Log ("getting points.... calculating..... points = " + totalPoints);
+		//Debug.Log ("getting points.... calculating..... points = " + totalPoints);
 
 		//THIS GOES IN CASE SOMETHING BREAKS
 		/*for (int i = 0; i < ingredientsInsideMachine.Count; i++) 
 		{
 			totalProcessTime += ingredientsInsideMachine [i].GetComponent<Ingredient> ().timeToProcess;
 			sltPnts.Add(ingredientsInsideMachine[i].GetComponent<Ingredient>().points * multiplyer);
-			Debug.Log ("multiplier = " + multiplyer );
+			//Debug.Log ("multiplier = " + multiplyer );
 			multiplyer = multiplyer / 2;
 			totalPoints += sltPnts [i];
 		}*/

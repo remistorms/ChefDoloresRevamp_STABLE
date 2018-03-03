@@ -48,13 +48,13 @@ public class PremioPanel : MonoBehaviour {
 
 		//Checks if the buttons are odd or even and gets the proper wigdth
 		if (totalButtons % 3 == 0 && totalButtons >= 9) {
-			Debug.Log ("Even numbered buttons");
+			//Debug.Log ("Even numbered buttons");
 			float x = 400 + (totalButtons/3) * 400;
 			size = new Vector2 (x, resizeableScrollArea.sizeDelta.y);
 		} 
 
 		else if (totalButtons % 3 != 0 && totalButtons >= 9) {
-			Debug.Log ("Odd numbered buttons");
+			//Debug.Log ("Odd numbered buttons");
 			float x = 400 + (Mathf.RoundToInt(totalButtons/3)) * 400;
 			size = new Vector2 (x, resizeableScrollArea.sizeDelta.y);
 		}
@@ -69,7 +69,7 @@ public class PremioPanel : MonoBehaviour {
 
 	//This method activates NEXT button only when one button is pressed
 	void NextButtonActivator(){
-		//Debug.LogError("I added a method to the button, but the cool thing is that the method is on this game object.... evens baby");
+		////Debug.LogError("I added a method to the button, but the cool thing is that the method is on this game object.... evens baby");
 		nextButton.interactable = true;
 	}
 
@@ -99,7 +99,7 @@ public class PremioPanel : MonoBehaviour {
 		yield return new WaitForSeconds (1.5f);
 
 		if(www.isNetworkError || www.isHttpError) {
-			Debug.Log(www.error);
+			//Debug.Log(www.error);
 			SecondaryCanvas.instance.ShowErrorMessage ("OCURRIO UN ERROR: " + www.error);
 		}
 		else {

@@ -17,7 +17,7 @@ public class ClickHandler : MonoBehaviour {
 		if (Input.GetMouseButtonDown(0)) {
 
 			//BEST DEBUGGER
-			//Debug.Log ("Player has clicked on " + RemCaster.instance.obj_in_sight.name + "; item in hand = " + IsHoldingItem().ToString());
+			////Debug.Log ("Player has clicked on " + RemCaster.instance.obj_in_sight.name + "; item in hand = " + IsHoldingItem().ToString());
 
 			//Checks if there is an object in sight
 			if (RemCaster.instance.obj_in_sight != null) {
@@ -49,10 +49,10 @@ public class ClickHandler : MonoBehaviour {
 
 
 					case "FinishedDish":
-					//Debug.Log ("Player has clicked on MixerMachine; Object in hand=" + hasItem.ToString());
+					////Debug.Log ("Player has clicked on MixerMachine; Object in hand=" + hasItem.ToString());
 					//IF HAS ITEM; PLACE IT ON MACHINE
 					if (IsHoldingItem() == false) {
-						Debug.Log ("Clicking on finished dish");
+						//Debug.Log ("Clicking on finished dish");
 						FinishedDish.instance.CollectDish ();
 
 					}

@@ -2787,6 +2787,37 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224828798601086046, guid: dd297b6f37b7b944d86279c2abd03943,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224828798601086046, guid: dd297b6f37b7b944d86279c2abd03943,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 224828798601086046, guid: dd297b6f37b7b944d86279c2abd03943,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224828798601086046, guid: dd297b6f37b7b944d86279c2abd03943,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114427722824401134, guid: dd297b6f37b7b944d86279c2abd03943,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 0576bc1ec1d3264499519e89ea242efe,
+        type: 3}
+    - target: {fileID: 114427722824401134, guid: dd297b6f37b7b944d86279c2abd03943,
+        type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd297b6f37b7b944d86279c2abd03943, type: 2}
   m_IsPrefabParent: 0
@@ -6019,6 +6050,25 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60270cf52a5e94998a5a335989159738, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1990485865 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1595644344424924, guid: dd297b6f37b7b944d86279c2abd03943,
+    type: 2}
+  m_PrefabInternal: {fileID: 785271731}
+--- !u!114 &1990485866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1990485865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2005565582
 GameObject:
   m_ObjectHideFlags: 0

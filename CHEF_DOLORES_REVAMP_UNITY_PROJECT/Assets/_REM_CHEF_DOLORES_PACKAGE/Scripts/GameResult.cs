@@ -97,7 +97,7 @@ public class GameResult : MonoBehaviour {
 		yield return new WaitForSeconds (1.5f);
 
 		if(www.isNetworkError || www.isHttpError) {
-			Debug.Log(www.error);
+			//Debug.Log(www.error);
 			//MESSAGE MESSAGE
 		}
 
