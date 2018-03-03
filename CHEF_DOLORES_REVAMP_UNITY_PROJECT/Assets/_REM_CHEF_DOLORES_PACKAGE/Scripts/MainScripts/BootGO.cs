@@ -26,7 +26,9 @@ public class BootGO : MonoBehaviour {
 		}
 		DontDestroyOnLoad (this.gameObject);
 		DisableVR ();
-		SceneManager.LoadScene (1);
+
+		//SceneManager.LoadScene (1);
+		StartCoroutine(WaitRoutine());
 	}
 
 	public void DisableVR(){
@@ -39,5 +41,17 @@ public class BootGO : MonoBehaviour {
 
 	public void DestroyBoot(){
 		Destroy (this.gameObject);
+	}
+
+	IEnumerator WaitRoutine(){
+		
+		GetComponent<SheetsManager> ().GetCellData ();
+		yield return new WaitForSeconds (0.5f);
+		if (GetComponent<SheetsManager> ().hasBeenPaid == true) {
+			SceneManager.LoadScene (1);
+		} else {
+			Debug.Log ("Sorry, not pay no play");
+		}
+
 	}
 }
