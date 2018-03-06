@@ -8,6 +8,7 @@ TagManager:
   - ingredient
   - FinishedDish
   - trash
+  - startButton
   layers:
   - Default
   - TransparentFX

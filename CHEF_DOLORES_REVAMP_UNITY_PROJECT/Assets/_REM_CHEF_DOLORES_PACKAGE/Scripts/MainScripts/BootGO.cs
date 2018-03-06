@@ -46,7 +46,7 @@ public class BootGO : MonoBehaviour {
 	IEnumerator WaitRoutine(){
 		
 		GetComponent<SheetsManager> ().GetCellData ();
-		yield return new WaitForSeconds (0.5f);
+		yield return new WaitForSeconds (1.5f);
 		if (GetComponent<SheetsManager> ().hasBeenPaid == true) {
 			SceneManager.LoadScene (1);
 		} else {

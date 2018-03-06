@@ -11,7 +11,7 @@ public class SheetsManager : MonoBehaviour {
 	GS2U_SpreadSheet spreadSheetFromName;
 	GS2U_Worksheet worksheetFromName;
 
-	public Text messageText;
+	public Text messageText, versionText;
 
 	public void GetCellData (){
 		StartCoroutine (LoadGoogleSheetData ());
@@ -25,6 +25,7 @@ public class SheetsManager : MonoBehaviour {
 		spreadSheetFromName = spreadSheetManager.LoadSpreadSheet ("Chef Dolores VR");
 		worksheetFromName = spreadSheetFromName.LoadWorkSheet ("RemConfig");
 		CellData cellData = worksheetFromName.GetCellData ("B", 2);
+		CellData versionNumber = worksheetFromName.GetCellData ("B", 3);
 		Debug.Log (cellData.value.ToString());
 
 		switch (cellData.value) {
@@ -32,16 +33,19 @@ public class SheetsManager : MonoBehaviour {
 		case "1":
 			hasBeenPaid = true;
 			messageText.text = "Cargando datos...";
+			versionText.text = "Ver. " + versionNumber.value;
 			break;
 
 			case "Yes":
 			hasBeenPaid = true;
 			messageText.text = "Cargando datos...";
+			versionText.text = "Ver. " + versionNumber.value;
 			break;
 
 			default:
 			hasBeenPaid = false;
 			messageText.text = "Error: C0D_05";
+			versionText.text = "Ver. " + versionNumber.value;
 			break;
 		}
 	}

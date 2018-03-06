@@ -13,8 +13,8 @@ public class ClickHandler : MonoBehaviour {
 	public void CheckClickProperties(){
 	
 
-
-		if (Input.GetMouseButtonDown(0)) {
+		//Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2") || Input.GetButtonDown("Fire3") || Input.GetMouseButtonDown(0)
+		if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2") || Input.GetButtonDown("Fire3") || Input.GetButtonDown("Jump")) {
 
 			//BEST DEBUGGER
 			////Debug.Log ("Player has clicked on " + RemCaster.instance.obj_in_sight.name + "; item in hand = " + IsHoldingItem().ToString());
@@ -55,6 +55,14 @@ public class ClickHandler : MonoBehaviour {
 						//Debug.Log ("Clicking on finished dish");
 						FinishedDish.instance.CollectDish ();
 
+					}
+					break;
+
+					case "startButton":
+					if (IsHoldingItem () == false && MixerMachine.instance.canMix) {
+						MixerMachine.instance.MixIngredients ();
+						ButtonPress.instance.AnimateButton ();
+						Debug.Log ("Machine started with button");
 					}
 					break;
 

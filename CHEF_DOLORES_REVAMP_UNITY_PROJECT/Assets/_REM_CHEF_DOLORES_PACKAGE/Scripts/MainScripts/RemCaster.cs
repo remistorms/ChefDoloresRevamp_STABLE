@@ -56,7 +56,7 @@ public class RemCaster : MonoBehaviour {
 			obj_in_sight = machineHit.collider.gameObject;
 
 			//Player clicks on mouse button
-			if (Input.GetMouseButtonDown(0)) {
+			if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("Fire1") || Input.GetKeyDown("Fire2") || Input.GetKeyDown("Fire3") || Input.GetKeyDown("Jump")) {
 				//Debug.Log("Player is clicking at machine while NOT holding an item");	
 			}
 		} 
@@ -66,7 +66,7 @@ public class RemCaster : MonoBehaviour {
 			//Debug.Log("Player is looking at machine while holding an item");
 			obj_in_sight = machineHit.collider.gameObject;
 			//Player clicks on mouse button
-			if (Input.GetMouseButtonDown(0)) {
+			if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("Fire1") || Input.GetKeyDown("Fire2") || Input.GetKeyDown("Fire3") || Input.GetKeyDown("Jump")) {
 				//Debug.Log("Player is clicking at machine while holding " + PlayerHand.instance.held_item.name);	
 			}
 		} 
@@ -76,13 +76,13 @@ public class RemCaster : MonoBehaviour {
 	/*	
 	void ClickOnItem(){
 		//Player clicks-on mouse when not holding an item in hand
-		if (Input.GetMouseButtonDown(0) && PlayerHand.instance.held_item == null && obj_in_sight != null) {
+		if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("Fire1") || Input.GetKeyDown("Fire2") || Input.GetKeyDown("Fire3") || Input.GetKeyDown("Jump") && PlayerHand.instance.held_item == null && obj_in_sight != null) {
 			//Debug.Log ("Grabbing " + obj_in_sight.name);
 			PlayerHand.instance.HoldItem (obj_in_sight);
 		}
 
 		//Player clicks-on mouse when holding an item in hand, also checks if machines is not maxed out
-		if (Input.GetMouseButtonDown(0) && PlayerHand.instance.held_item != null && obj_in_sight.tag == "MixerMachine" && MixerMachine.instance.isMaxedOut == false) {
+		if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("Fire1") || Input.GetKeyDown("Fire2") || Input.GetKeyDown("Fire3") || Input.GetKeyDown("Jump") && PlayerHand.instance.held_item != null && obj_in_sight.tag == "MixerMachine" && MixerMachine.instance.isMaxedOut == false) {
 
 			PlayerHand.instance.DropItem ();
 		}

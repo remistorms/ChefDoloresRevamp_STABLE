@@ -5,8 +5,12 @@ using DG.Tweening;
 
 public class ButtonPress : MonoBehaviour {
 
+	public static ButtonPress instance;
 
-
+	void Awake()
+	{
+		instance = this;
+	}
 	public void AnimateButton(){
 		StartCoroutine (ButtonPressRoutine ());
 	}
